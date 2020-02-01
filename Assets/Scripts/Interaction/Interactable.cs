@@ -9,7 +9,7 @@ public class Interactable : MonoBehaviour {
 	public bool highlighted = false;
 
 	public float InteractTime = 0.5f;
-	
+
 
 	public InteractEvent OnInteractSuccess = new InteractEvent();
 	public UnityEvent OnInteract = new UnityEvent();
@@ -27,6 +27,11 @@ public class Interactable : MonoBehaviour {
 		_defaultMaterial = meshRenderer.sharedMaterial;
 	}
 
+	public bool AllowInteraction()
+	{
+		return allowInteract;
+	}
+
 	public void Highlight()
 	{
 
@@ -37,8 +42,6 @@ public class Interactable : MonoBehaviour {
 
 			meshRenderer.sharedMaterial = highlightMaterial;
 		}
-
-
 	}
 
 	public void RemoveHighlight()

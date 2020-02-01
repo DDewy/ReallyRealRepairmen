@@ -20,7 +20,8 @@ public class PhoneManager : MonoBehaviour {
 	private AudioSource taskSound;
 	private RectTransform strikeThru;
 	private AudioSource strikeSound;
-	public bool isStowed;
+	public bool isStowed = true;
+
 
 
 	void Awake()
@@ -103,10 +104,19 @@ public class PhoneManager : MonoBehaviour {
 
 	public void NewTextMessage(string txtMsg)
 	{
+		if (isStowed == true) 
+		{
+			isStowed = false;
+			phoneAnim.SetTrigger("MessageOpen");
+		}
+		else
+		{
+			phoneAnim.SetTrigger("PhoneShake");
+		}
+
 		if (NumOfTexts == 4) scrollTexts();
 
-		messageSound.Play();
-		phoneAnim.SetTrigger("PhoneShake");
+		messageSound.Play();		
 
 		GameObject newText;
 		newText = Instantiate(TextMsgPrefab);

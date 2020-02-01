@@ -8,6 +8,8 @@ public class Interactor : MonoBehaviour {
 	[Header("Components")]
 	public Transform CamTrans;
 
+	public UIManager uiManager;
+
 	[Header("Settings")]
 	public float castRadius = 0.5f;
 
@@ -36,12 +38,17 @@ public class Interactor : MonoBehaviour {
 	/// <summary>
 	/// Used to count how long the mouse has been hold down for while over a interactable object
 	/// </summary>
-	[SerializeField] private float _holdCounter = 0f;
+	private float _holdCounter = 0f;
 
 	/// <summary>
 	/// Tracks if an interaction has been attempted and only allows another interaction until the mouse button has been released
 	/// </summary>
-	[SerializeField] private bool _interactAttempted = false;
+	private bool _interactAttempted = false;
+
+	/// <summary>
+	/// The interaction state from the last frame
+	/// </summary>
+	private bool _previousInteract = false;
 	
 	// Use this for initialization
 	void Start () 
@@ -86,8 +93,16 @@ public class Interactor : MonoBehaviour {
 		}
 
 		//Has to be looking at a valid object, mouse button must be held down, and the button has been released since the last interaction
-		if(newInteractValid && Input.GetMouseButton(0))
+		if(newInteractValid && Input.GetMouseButton(0) && newInteract.AllowInteraction())
 		{
+			//Enable the UI
+			var gameplayScreen = uiManager.gameplayScreen;
+			if(!_previousInteract)
+			{
+				gameplayScreen.ProgressBG.enabled = true;
+				gameplayScreen.ProgressCircle.enabled = true;
+			}
+			
 			_holdCounter += Time.deltaTime;
 
 			if(_holdCounter > newInteract.InteractTime && !_interactAttempted)
@@ -95,12 +110,29 @@ public class Interactor : MonoBehaviour {
 				newInteract.AttemptInteraction();
 
 				_interactAttempted = true;
+
+				//Hide the progress circles now
+				gameplayScreen.ProgressBG.enabled = false;
+				gameplayScreen.ProgressCircle.enabled = false;
 			}
+
+			gameplayScreen.ProgressCircle.fillAmount = _holdCounter / newInteract.InteractTime;
+
+			_previousInteract = true;
 		}
 		else
 		{
+			if(_previousInteract)
+			{
+				//Need to turn off the images
+				var gameplayScreen = uiManager.gameplayScreen;
+				gameplayScreen.ProgressBG.enabled = false;
+				gameplayScreen.ProgressCircle.enabled = false;
+			}
+
 			_holdCounter = 0f;
 			_interactAttempted = false;
+			_previousInteract = false;
 		}
 
 		_lastInteract = newInteract;
