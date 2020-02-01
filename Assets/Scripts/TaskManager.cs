@@ -8,6 +8,8 @@ public class TaskManager : MonoBehaviour
 	public DoorManager doorManager;
 	public FixableManager fixableManager;
 
+	private PhoneManager _phoneManager;
+
 	[Header("Tasks")]
 	public TaskObject[] tasksToDo;
 
@@ -17,10 +19,21 @@ public class TaskManager : MonoBehaviour
 
 
 	// Use this for initialization
-	void Start () 
+	IEnumerator Start () 
 	{
+		//Save reference to the phone manager
+		_phoneManager = PhoneManager.instance;
+
+		//Wait for 2 seconds before showing the first task
+		yield return new WaitForSeconds(2f);
+
 		//Set the task manager off onto the first task
 		SetTask(0);
+	}
+
+	void SetTask()
+	{
+		SetTask(_currentIndex);
 	}
 	
 	void SetTask(int taskIndex)
@@ -44,6 +57,9 @@ public class TaskManager : MonoBehaviour
 
 		//Open any doors we need to for this 
 		ExecuteDoorCommands(task.roomCommandsOnStart);
+
+		//Set the main task for the player to do right now
+		_phoneManager.setTask(task.TaskName);
 
 		//Send the messages needed
 		PhoneManager.instance.SendMultipleMessages(task.TaskMessages);
@@ -79,6 +95,9 @@ public class TaskManager : MonoBehaviour
 		//Open any doors we need to for this task
 		ExecuteDoorCommands(task.roomCommandsOnFix);
 
+		//Strike through the current task
+		_phoneManager.taskComplete();
+
 		//Stop Listening to this task
 		StopListeningToTask(_currentIndex);
 
@@ -87,7 +106,7 @@ public class TaskManager : MonoBehaviour
 		_currentIndex++;
 		if(_currentIndex < tasksToDo.Length)
 		{
-			SetTask(_currentIndex);
+			Invoke(nameof(SetTask), 2f);
 		}
 		else
 		{
