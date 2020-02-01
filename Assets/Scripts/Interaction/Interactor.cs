@@ -11,11 +11,42 @@ public class Interactor : MonoBehaviour {
 	[Header("Settings")]
 	public float castRadius = 0.5f;
 
+	/// <summary>
+	/// The range of the interactable physics cast
+	/// </summary>
 	public float interactRange = 5f;
+
+	/// <summary>
+	/// The amount of time the Left mouse button has to be held down for
+	/// </summary>
+	public float HoldThreshold = 0.5f;
+
+	//--------------- PRIVATE VARIABLES ---------------
+
+	/// <summary>
+	/// This holds the layer numnber of the interactable objects
+	/// </summary>
 	private int interactLayer;
+
+	/// <summary>
+	/// This is the physics mask that is used to search for a interactable object
+	/// </summary>
 	private int interactMask;
 
+	/// <summary>
+	/// This is holding the interactable reference from the previous frame
+	/// </summary>
 	private Interactable _lastInteract;
+
+	/// <summary>
+	/// Used to count how long the mouse has been hold down for while over a interactable object
+	/// </summary>
+	[SerializeField] private float _holdCounter = 0f;
+
+	/// <summary>
+	/// Tracks if an interaction has been attempted and only allows another interaction until the mouse button has been released
+	/// </summary>
+	[SerializeField] private bool _interactAttempted = false;
 	
 	// Use this for initialization
 	void Start () 
@@ -59,9 +90,22 @@ public class Interactor : MonoBehaviour {
 			newInteract.Highlight();
 		}
 
-		if(newInteractValid && Input.GetMouseButtonDown(0))
+		//Has to be looking at a valid object, mouse button must be held down, and the button has been released since the last interaction
+		if(newInteractValid && Input.GetMouseButton(0))
 		{
-			newInteract.AttemptInteraction();
+			_holdCounter += Time.deltaTime;
+
+			if(_holdCounter > HoldThreshold && !_interactAttempted)
+			{
+				newInteract.AttemptInteraction();
+
+				_interactAttempted = true;
+			}
+		}
+		else
+		{
+			_holdCounter = 0f;
+			_interactAttempted = false;
 		}
 
 		_lastInteract = newInteract;

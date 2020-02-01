@@ -460,6 +460,9 @@ MonoBehaviour:
   CamTrans: {fileID: 591694022}
   castRadius: 0.2
   interactRange: 1
+  HoldThreshold: 0.5
+  _holdCounter: 0
+  _interactAttempted: 0
 --- !u!1 &973257668
 GameObject:
   m_ObjectHideFlags: 0
@@ -965,7 +968,7 @@ GameObject:
   - component: {fileID: 1533219679}
   - component: {fileID: 1533219681}
   - component: {fileID: 1533219680}
-  m_Layer: 11
+  m_Layer: 1
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
