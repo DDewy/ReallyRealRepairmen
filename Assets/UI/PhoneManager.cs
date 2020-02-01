@@ -34,11 +34,10 @@ public class PhoneManager : MonoBehaviour {
 		{
 			Debug.LogWarning("Deleting the PhoneManager");
 			DestroyImmediate(this);
+			return;
 		}
-	}
-	// Use this for initialization
-	void Start () 
-	{
+
+		//Get all References
 		MessageContainer = this.transform.GetChild(0).gameObject;
 		NumOfTexts = MessageContainer.transform.childCount;	
 		messageSound = this.GetComponent<AudioSource>();	

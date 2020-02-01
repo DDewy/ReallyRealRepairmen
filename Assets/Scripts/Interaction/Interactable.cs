@@ -16,16 +16,17 @@ public class Interactable : MonoBehaviour {
 
 	public UnityEvent OnHighlight = new UnityEvent();
 
+	#if TEST_HIGHLIGHT
 	[Header("Testing")]
 	public Material highlightMaterial;
 	public MeshRenderer meshRenderer;
-
 	private Material _defaultMaterial;
-
+	
 	private void Start() 
 	{
 		_defaultMaterial = meshRenderer.sharedMaterial;
 	}
+	#endif
 
 	public void SetAllowInteraction(bool b)
 	{
@@ -45,7 +46,9 @@ public class Interactable : MonoBehaviour {
 			highlighted = true;
 			OnHighlight.Invoke();
 
+			#if TEST_HIGHLIGHT
 			meshRenderer.sharedMaterial = highlightMaterial;
+			#endif
 		}
 	}
 
@@ -53,7 +56,9 @@ public class Interactable : MonoBehaviour {
 	{
 		highlighted = false;
 
+		#if TEST_HIGHLIGHT
 		meshRenderer.sharedMaterial = _defaultMaterial;
+		#endif
 	}
 	
 	public bool AttemptInteraction()
