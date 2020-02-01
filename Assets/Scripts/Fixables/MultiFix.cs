@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TVScript : MonoBehaviour 
+public class MultiFix : MonoBehaviour 
 {
 
 	// Use this for initialization
 	private int fixNum = 0;
-	public void FixTV()
+	public void AddFix()
 	{
 		fixNum++;
 
