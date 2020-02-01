@@ -19,6 +19,8 @@ public class TaskObject : ScriptableObject {
 
 	public string[] TaskMessages;
 
+	public string TaskName;
+
 	[System.Serializable]
 	public struct RoomCommand
 	{
