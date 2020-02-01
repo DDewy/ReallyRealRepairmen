@@ -33,6 +33,20 @@ public class PhoneManager : MonoBehaviour {
 
 	}
 
+	public void SendMultipleMessages(string[] newMsgs)
+	{
+		StartCoroutine(DelayMessages(newMsgs));
+	}
+
+	IEnumerator DelayMessages(string[] newMsgs)
+	{
+		foreach(string msg in newMsgs)
+		{
+			NewTextMessage(msg);
+			yield return new WaitForSeconds(0.2f);
+		}
+	}
+
 	public void NewTextMessage(string txtMsg)
 	{
 		GameObject newText;
