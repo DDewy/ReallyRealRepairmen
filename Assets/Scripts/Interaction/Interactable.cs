@@ -27,11 +27,6 @@ public class Interactable : MonoBehaviour {
 		_defaultMaterial = meshRenderer.sharedMaterial;
 	}
 
-	public void SetAllowInteraction(bool b)
-	{
-		allowInteract = b;
-	}
-
 	public bool AllowInteraction()
 	{
 		return allowInteract;

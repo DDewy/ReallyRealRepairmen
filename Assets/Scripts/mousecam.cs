@@ -16,34 +16,15 @@ public class mousecam : MonoBehaviour
     // smooth the mouse moving
     private Vector2 smoothV;
 
-    public bool trackMouse = true;
-
     // Use this for initialization
     void Start()
     {
         character = this.transform.parent.gameObject;
-
-        LockMouse();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Tab))
-        {
-            if(trackMouse)
-            {
-                ReleaseMouse();
-            }
-            else
-            {
-                LockMouse();
-            }
-        }
-
-        if(!trackMouse)
-            return;
-
         // md is mosue delta
         var md = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
         md = Vector2.Scale(md, new Vector2(sensitivity * smoothing, sensitivity * smoothing));
@@ -56,37 +37,5 @@ public class mousecam : MonoBehaviour
         // vector3.right means the x-axis
         transform.localRotation = Quaternion.AngleAxis(-mouseLook.y, Vector3.right);
         character.transform.localRotation = Quaternion.AngleAxis(mouseLook.x, character.transform.up);
-    }
-
-    private void OnDestroy() {
-        ReleaseMouse();
-    }
-
-    private void OnApplicationFocus(bool focusStatus)
-    {
-        Debug.LogFormat("Application Focus {0}", focusStatus);
-        if(focusStatus)
-        {
-            //Lock the mouse
-            LockMouse();
-        }
-        else
-        {
-            
-        }
-    }
-
-    private void LockMouse()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-        trackMouse = true;
-    }
-
-    private void ReleaseMouse()
-    {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-        trackMouse = false;
     }
 }
