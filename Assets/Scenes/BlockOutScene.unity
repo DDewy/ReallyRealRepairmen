@@ -164,6 +164,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c0d9bc1a227fef74fafbfec1dd6421d3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0d9bc1a227fef74fafbfec1dd6421d3, type: 3}
   m_IsPrefabAsset: 0
@@ -61249,7 +61253,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh15494
+  m_Name: pb_Mesh30820
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
