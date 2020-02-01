@@ -58,6 +58,11 @@ public class Interactor : MonoBehaviour {
 		interactLayer = LayerMask.NameToLayer("Interact");
 		interactMask = 1 << interactLayer | 1 << LayerMask.NameToLayer("Floor") | 1 << LayerMask.NameToLayer("Default");
 		_phoneManager = PhoneManager.instance;
+
+		//Turn the circle UI off
+		var gameplayScreen = uiManager.gameplayScreen;
+		gameplayScreen.ProgressBG.enabled = false;
+		gameplayScreen.ProgressCircle.enabled = false;
 	}
 	
 	// Update is called once per frame
