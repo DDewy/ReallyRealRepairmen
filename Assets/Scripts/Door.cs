@@ -9,19 +9,12 @@ public class Door : MonoBehaviour {
 
 	public Animator doorAnimator;
 
-	public bool startOpen = false;
-
 	[Header("Audio")]
 	public AudioSource doorAudio;
 
 	public AudioClip openClip;
 	public AudioClip closeClip;
 	private bool isOpen = false;
-
-	private void Start() {
-		if(startOpen)
-			OpenDoor();
-	}
 
 	public void OpenDoor()
 	{
