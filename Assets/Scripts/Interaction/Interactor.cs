@@ -16,11 +16,6 @@ public class Interactor : MonoBehaviour {
 	/// </summary>
 	public float interactRange = 5f;
 
-	/// <summary>
-	/// The amount of time the Left mouse button has to be held down for
-	/// </summary>
-	public float HoldThreshold = 0.5f;
-
 	//--------------- PRIVATE VARIABLES ---------------
 
 	/// <summary>
@@ -95,7 +90,7 @@ public class Interactor : MonoBehaviour {
 		{
 			_holdCounter += Time.deltaTime;
 
-			if(_holdCounter > HoldThreshold && !_interactAttempted)
+			if(_holdCounter > newInteract.InteractTime && !_interactAttempted)
 			{
 				newInteract.AttemptInteraction();
 
