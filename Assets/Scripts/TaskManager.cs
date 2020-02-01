@@ -62,7 +62,8 @@ public class TaskManager : MonoBehaviour
 		_phoneManager.setTask(task.TaskName);
 
 		//Send the messages needed
-		PhoneManager.instance.SendMultipleMessages(task.TaskMessages);
+		_phoneManager.ClearMessages();
+		_phoneManager.SendMultipleMessages(task.TaskMessages);
 	}
 
 	void SetTask(TaskObject taskObject)
@@ -111,6 +112,9 @@ public class TaskManager : MonoBehaviour
 		else
 		{
 			Debug.Log("All of the tasks have been completed");
+
+			_phoneManager.ClearMessages();
+			_phoneManager.SendMultipleMessages(new string[] {"We good fam", "Now we get to leave"});
 		}
 	}
 

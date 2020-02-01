@@ -63,6 +63,7 @@ public class Interactor : MonoBehaviour {
 		var gameplayScreen = uiManager.gameplayScreen;
 		gameplayScreen.ProgressBG.enabled = false;
 		gameplayScreen.ProgressCircle.enabled = false;
+		gameplayScreen.HighlightImg.enabled = false;
 	}
 	
 	// Update is called once per frame
@@ -88,16 +89,18 @@ public class Interactor : MonoBehaviour {
 		bool oldInteractValid = _lastInteract != null;
 
 		//Check if we need to tell the old interact that it is no longer highlighted
-		if(oldInteractValid && (!newInteract || (newInteract != _lastInteract)))
+		if(oldInteractValid && (!newInteract || (newInteract != _lastInteract)) && _lastInteract.AllowInteraction())
 		{
 			//If old is valid, and new is null or new isn't the same as old then we are telling the old that it is no longer highlighted
 			_lastInteract.RemoveHighlight();
+			uiManager.gameplayScreen.HighlightImg.enabled = false;
 		}
 
 		//Check if we need to highlight the current interact
-		if(newInteractValid && (newInteract != _lastInteract))
+		if(newInteractValid && (newInteract != _lastInteract) && newInteract.AllowInteraction())
 		{
 			newInteract.Highlight();
+			uiManager.gameplayScreen.HighlightImg.enabled = true;
 		}
 
 		//Has to be looking at a valid object, mouse button must be held down, and the button has been released since the last interaction
@@ -109,6 +112,8 @@ public class Interactor : MonoBehaviour {
 			{
 				gameplayScreen.ProgressBG.enabled = true;
 				gameplayScreen.ProgressCircle.enabled = true;
+				//Hide highlight when using
+				gameplayScreen.HighlightImg.enabled = false;
 			}
 			
 			_holdCounter += Time.deltaTime;

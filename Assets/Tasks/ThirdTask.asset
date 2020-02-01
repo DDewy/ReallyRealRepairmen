@@ -13,9 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomCommandsOnStart: []
   roomCommandsOnFix: []
-  fixableType: 2
+  fixableType: 9
   TaskMessages:
   - Hey!
-  - For some reason the pipes broke again
+  - For some reason the fridge broke again
   - I swear it wasn't me
-  TaskName: Fix the Pipes
+  TaskName: Fix the fridge
