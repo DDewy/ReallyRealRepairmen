@@ -10,6 +10,8 @@ public class Interactor : MonoBehaviour {
 
 	public UIManager uiManager;
 
+	private PhoneManager _phoneManager;
+
 	[Header("Settings")]
 	public float castRadius = 0.5f;
 
@@ -55,6 +57,7 @@ public class Interactor : MonoBehaviour {
 	{
 		interactLayer = LayerMask.NameToLayer("Interact");
 		interactMask = 1 << interactLayer | 1 << LayerMask.NameToLayer("Floor") | 1 << LayerMask.NameToLayer("Default");
+		_phoneManager = PhoneManager.instance;
 	}
 	
 	// Update is called once per frame
@@ -136,6 +139,12 @@ public class Interactor : MonoBehaviour {
 		}
 
 		_lastInteract = newInteract;
+
+		//F is to put the phone away
+		if(Input.GetKeyDown(KeyCode.F))
+		{
+			_phoneManager.putPhoneAway();
+		}
 	}
 
     private void OnDrawGizmos() 
