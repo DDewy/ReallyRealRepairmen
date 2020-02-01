@@ -530,14 +530,6 @@ Prefab:
     - {fileID: 114060614177213064, guid: 74550d0050670a9459e0f20c17f8dc44, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 74550d0050670a9459e0f20c17f8dc44, type: 2}
   m_IsPrefabAsset: 0
-<<<<<<< Updated upstream
-=======
---- !u!4 &388775358 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4883492050833788, guid: 0befda66179a2224f929340b7ac5c387,
-    type: 2}
-  m_PrefabInternal: {fileID: 1676098569}
->>>>>>> Stashed changes
 --- !u!1 &405970037
 GameObject:
   m_ObjectHideFlags: 0
@@ -1026,7 +1018,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4183330442036944, guid: 32d17ee7e6f05d544bdddf8e7c0b9bf8,
     type: 2}
   m_PrefabInternal: {fileID: 726394248}
-<<<<<<< Updated upstream
 --- !u!1001 &758666826
 Prefab:
   m_ObjectHideFlags: 0
@@ -1073,8 +1064,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74550d0050670a9459e0f20c17f8dc44, type: 2}
   m_IsPrefabAsset: 0
-=======
->>>>>>> Stashed changes
 --- !u!1001 &1006799581
 Prefab:
   m_ObjectHideFlags: 0
@@ -1548,7 +1537,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
 --- !u!1 &1271739055 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1615909339574652, guid: 74550d0050670a9459e0f20c17f8dc44,
@@ -1593,8 +1581,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-=======
->>>>>>> Stashed changes
 --- !u!1001 &1366624798
 Prefab:
   m_ObjectHideFlags: 0
@@ -1832,52 +1818,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4183330442036944, guid: 32d17ee7e6f05d544bdddf8e7c0b9bf8,
     type: 2}
   m_PrefabInternal: {fileID: 1459097260}
---- !u!1001 &1676098569
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1092954829}
-    m_Modifications:
-    - target: {fileID: 4883492050833788, guid: 0befda66179a2224f929340b7ac5c387, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -2.015
-      objectReference: {fileID: 0}
-    - target: {fileID: 4883492050833788, guid: 0befda66179a2224f929340b7ac5c387, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4883492050833788, guid: 0befda66179a2224f929340b7ac5c387, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -3.408
-      objectReference: {fileID: 0}
-    - target: {fileID: 4883492050833788, guid: 0befda66179a2224f929340b7ac5c387, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4883492050833788, guid: 0befda66179a2224f929340b7ac5c387, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4883492050833788, guid: 0befda66179a2224f929340b7ac5c387, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4883492050833788, guid: 0befda66179a2224f929340b7ac5c387, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4883492050833788, guid: 0befda66179a2224f929340b7ac5c387, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1190732245436292, guid: 0befda66179a2224f929340b7ac5c387, type: 2}
-      propertyPath: m_Name
-      value: Fridge
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0befda66179a2224f929340b7ac5c387, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!198 &1712746092 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 198707465995062164, guid: 74550d0050670a9459e0f20c17f8dc44,
@@ -2068,6 +2008,7 @@ Transform:
   m_Children:
   - {fileID: 585757280}
   - {fileID: 99389221}
+  - {fileID: 1271739056}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
