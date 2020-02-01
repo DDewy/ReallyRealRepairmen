@@ -2017,6 +2017,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 23217519210844234, guid: bdd38ed7e46ed0e4789f2e2ae4079c57,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdd38ed7e46ed0e4789f2e2ae4079c57, type: 2}
   m_IsPrefabAsset: 0
