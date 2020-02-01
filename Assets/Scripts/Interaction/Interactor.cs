@@ -108,8 +108,14 @@ public class Interactor : MonoBehaviour {
 
     private void OnDrawGizmos() 
 	{
-		Gizmos.color = Color.red;
-        Vector3 camPos = CamTrans.position;
-		Gizmos.DrawLine(camPos, camPos + (CamTrans.forward * interactRange));
+		if(Application.isPlaying)
+		{
+			Gizmos.color = Color.red;
+			Vector3 camPos = CamTrans.position;
+			Vector3 endPos = camPos + (CamTrans.forward * interactRange);
+			Gizmos.DrawLine(camPos, endPos);
+			Gizmos.DrawWireSphere(camPos, castRadius);
+			Gizmos.DrawWireSphere(endPos, castRadius);
+		}
     }
 }
