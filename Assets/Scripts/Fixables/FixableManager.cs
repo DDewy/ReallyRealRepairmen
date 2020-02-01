@@ -39,7 +39,7 @@ public class FixableManager : MonoBehaviour {
 			}
 		}
 
-		Debug.LogFormat("Could not find {0} in the fixables list, please add a {0} into the scene", type.ToString());
+		Debug.LogErrorFormat("Could not find {0} in the fixables list, please add a {0} into the scene", type.ToString());
 		return null;
 	}
 }

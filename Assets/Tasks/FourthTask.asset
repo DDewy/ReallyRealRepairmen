@@ -9,13 +9,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 17f00ecaf5955684188983e7e7140c17, type: 3}
-  m_Name: FirstTask
+  m_Name: FourthTask
   m_EditorClassIdentifier: 
   roomCommandsOnStart: []
   roomCommandsOnFix: []
-  fixableType: 2
+  fixableType: 0
   TaskMessages:
-  - Hey Dude
-  - Can you fix the pipes?
-  - Thanks
-  TaskName: Fix the pipes
+  - TV...
+  - I didn't touch it
+  TaskName: Fix the TV
