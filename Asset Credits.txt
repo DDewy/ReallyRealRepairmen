@@ -1,8 +1,22 @@
 FONTS
-Kalam - Copyright (c) 2014, Indian Type Foundry - SIL OPEN FONT LICENSE Version 1.1
+	Kalam - Copyright (c) 2014, Indian Type Foundry - SIL OPEN FONT LICENSE Version 1.1
 
 SOUNDS
-
-Messenger Notification Sounds by zzwerty - https://freesound.org/people/zzwerty/sounds/315878/ - CC Attribution Noncommercial License
-Paper Scrawling by jackyyang09 - https://freesound.org/people/jackyyang09/sounds/476840/ - CC0
-Paper Scratch Pencil drawing line by johannesschmidt - https://freesound.org/people/johannesschmidt/sounds/339741/ - CC Attribution License - Modification: trimmed length of clip
+	zzwerty's:
+		Messenger Notification Sounds - https://freesound.org/people/zzwerty/sounds/315878/
+		CC Attribution Noncommercial License
+	jackyyang09's:
+		Paper Scrawling - https://freesound.org/people/jackyyang09/sounds/476840/ 
+		CC0
+	johannesschmidt's:
+		Paper Scratch Pencil drawing line - https://freesound.org/people/johannesschmidt/sounds/339741/ 
+		CC Attribution License - Modification: trimmed length of clip
+	RonaldVanWonderen's:
+		Heavy_footstep.wav - https://freesound.org/people/RonaldVanWonderen/sounds/110099/
+		Heavy_footstep_wood_3.wav - https://freesound.org/people/RonaldVanWonderen/sounds/110100/
+		Heavy_wood_footstep 2.wav - https://freesound.org/people/RonaldVanWonderen/sounds/110101/
+		CC Attribution License
+	Mateo_Herrera's
+		05-RechinidoPasos.wav - https://freesound.org/people/Mateo_Herrera/sounds/471127/
+		CC Attribution License
+	
