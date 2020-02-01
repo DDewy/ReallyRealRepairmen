@@ -5,36 +5,79 @@ using UnityEngine.UI;
 
 public class PhoneManager : MonoBehaviour {
 
+	public static PhoneManager instance;
 
 	public GameObject TextMsgPrefab;
 	private GameObject MessageContainer;
 	private int NumOfTexts;
 	private float textLineHeight;
 	private float messageSpacing;
-	public string[] dialogue;
 	private int lineNum;
+	private AudioSource messageSound;
+	private Animator phoneShake;
+	private Text taskText; 
 
 
-	// Use this for initialization
-	void Start () {
-
-		MessageContainer = this.transform.GetChild(0).gameObject;
-		NumOfTexts = MessageContainer.transform.childCount;		
-	}
-	
-	// Update is called once per frame
-	void Update () 
-	{		
-
-		if (Input.GetKeyDown("space"))
+	void Awake()
+	{
+		if(instance == null||instance==this)
 		{
-			NewTextMessage(dialogue[Random.Range(0, dialogue.Length-1)]);
+			instance = this;
 		}
+		else
+		{
+			Debug.LogWarning("Deleting the PhoneManager");
+			DestroyImmediate(this);
+		}
+	}
+	// Use this for initialization
+	void Start () 
+	{
+		MessageContainer = this.transform.GetChild(0).gameObject;
+		NumOfTexts = MessageContainer.transform.childCount;	
+		messageSound = this.GetComponent<AudioSource>();	
+		phoneShake = this.GetComponent<Animator>();
+		taskText = gameObject.transform.parent.GetChild(0).GetComponentInChildren<Text>();
+	}
 
+	public void setTask(string newTask)
+	{
+		taskText.text = "newTask";
+	}
+
+	public void ClearMessages()
+	{
+		NumOfTexts = 0;
+		if (MessageContainer.transform.childCount != 0)
+		{
+			for(int i = 0; i < MessageContainer.transform.childCount; i++)
+			{
+				Destroy(MessageContainer.transform.GetChild(i).gameObject);
+			}
+		}		
+	}
+
+	public void SendMultipleMessages(string[] newMsgs)
+	{
+		StartCoroutine(DelayMessages(newMsgs));
+	}
+
+	IEnumerator DelayMessages(string[] newMsgs)
+	{
+		foreach(string msg in newMsgs)
+		{
+			NewTextMessage(msg);
+			yield return new WaitForSeconds(0.6f);
+		}
 	}
 
 	public void NewTextMessage(string txtMsg)
 	{
+		if (NumOfTexts == 4) scrollTexts();
+
+		messageSound.Play();
+		phoneShake.SetTrigger("PhoneShake");
+
 		GameObject newText;
 		newText = Instantiate(TextMsgPrefab);
 		RectTransform newTextT = newText.GetComponent<RectTransform>();
@@ -52,5 +95,19 @@ public class PhoneManager : MonoBehaviour {
 		newText.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, (NumOfTexts*-messageSpacing));
 
 		NumOfTexts++;
+	}
+
+	public void scrollTexts()
+	{
+		NumOfTexts--;
+
+		Destroy(MessageContainer.transform.GetChild(0).gameObject);
+
+		for(int i = 0; i < MessageContainer.transform.childCount; i++)
+		{
+			RectTransform tempTxt = MessageContainer.transform.GetChild(i).GetComponent<RectTransform>();
+			tempTxt.anchoredPosition = new Vector2(tempTxt.anchoredPosition.x, tempTxt.anchoredPosition.y + messageSpacing);
+		}
+
 	}
 }
