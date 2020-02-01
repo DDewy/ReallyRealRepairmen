@@ -14,8 +14,13 @@ public class PhoneManager : MonoBehaviour {
 	private float messageSpacing;
 	private int lineNum;
 	private AudioSource messageSound;
-	private Animator phoneShake;
+	private Animator phoneAnim;
+	private Animator strikeAnim;
 	private Text taskText; 
+	private AudioSource taskSound;
+	private RectTransform strikeThru;
+	private AudioSource strikeSound;
+	public bool isStowed;
 
 
 	void Awake()
@@ -36,13 +41,38 @@ public class PhoneManager : MonoBehaviour {
 		MessageContainer = this.transform.GetChild(0).gameObject;
 		NumOfTexts = MessageContainer.transform.childCount;	
 		messageSound = this.GetComponent<AudioSource>();	
-		phoneShake = this.GetComponent<Animator>();
+		phoneAnim = this.GetComponent<Animator>();
 		taskText = gameObject.transform.parent.GetChild(0).GetComponentInChildren<Text>();
+		taskSound = taskText.gameObject.GetComponent<AudioSource>();
+		strikeThru = taskText.gameObject.transform.parent.GetChild(1).GetComponent<RectTransform>();
+		strikeAnim = strikeThru.gameObject.GetComponent<Animator>();
+		strikeSound = strikeThru.gameObject.GetComponent<AudioSource>();
+	}
+
+	public void bringUpPhone()
+	{
+		isStowed = false;
+		phoneAnim.SetTrigger("BringUpPhone");
+	}
+
+	public void putPhoneAway()
+	{
+		isStowed = true;
+		phoneAnim.SetTrigger("PutAwayPhone");
 	}
 
 	public void setTask(string newTask)
 	{
-		taskText.text = "newTask";
+		strikeThru.gameObject.SetActive(false);
+		taskSound.Play();
+		taskText.text = newTask;
+	}
+
+	public void taskComplete()
+	{		
+		strikeThru.gameObject.SetActive(true);
+		strikeSound.Play();
+		strikeAnim.SetTrigger("Strikethru");
 	}
 
 	public void ClearMessages()
@@ -76,7 +106,7 @@ public class PhoneManager : MonoBehaviour {
 		if (NumOfTexts == 4) scrollTexts();
 
 		messageSound.Play();
-		phoneShake.SetTrigger("PhoneShake");
+		phoneAnim.SetTrigger("PhoneShake");
 
 		GameObject newText;
 		newText = Instantiate(TextMsgPrefab);
