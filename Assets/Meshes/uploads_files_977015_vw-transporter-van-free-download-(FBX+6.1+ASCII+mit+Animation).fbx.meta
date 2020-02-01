@@ -1,0 +1,129 @@
+fileFormatVersion: 2
+guid: 354e06281e6f9ae4d8afc1076ef3f024
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Empty_004
+    100002: Empty_005
+    100004: //RootNode
+    100006: vw-transporter-van-free-download
+    400000: Empty_004
+    400002: Empty_005
+    400004: //RootNode
+    400006: vw-transporter-van-free-download
+    2100000: Schwatzebereiche__Bake_col_jpg
+    2100002: Schwatzebereiche__Untitled
+    2100004: Schwatzebereiche
+    2100006: Innenraum__Untitled
+    2100008: VW_Lack_Blau__Untitled
+    2100010: Innenraum__Bake_col_jpg
+    2100012: Innenraum__DSC02138_jpg_001
+    2100014: Innenraum
+    2100016: Autoglas
+    2100018: Spiegel__Untitled
+    2100020: Lenkrad
+    2100022: Lenkrad_2
+    2100024: Fahrerarmatur
+    2100026: Scheibenwischer
+    2100028: Rad_Gummi
+    2100030: Wheel_Felge
+    2100032: Autozeichen
+    2100034: Autozeichen_Ramen
+    2100036: Autoglas__Untitled
+    2100038: Blinker__Untitled
+    2100040: Licht_rot_2__Untitled
+    2100042: Licht_Weiss__Untitled
+    2100044: Material_005
+    2100046: Material_006
+    2100048: Black
+    2100050: Spiegel
+    2100052: Sitz_1
+    2100054: Sitz_2
+    2300000: vw-transporter-van-free-download
+    3300000: vw-transporter-van-free-download
+    4300000: vw-transporter-van-free-download
+    7400000: Default Take
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
