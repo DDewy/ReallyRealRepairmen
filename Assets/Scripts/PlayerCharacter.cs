@@ -26,6 +26,9 @@ public class PlayerCharacter : MonoBehaviour {
     {
         _camTrans = Cam.transform;
         _playerTrans = RB.transform;
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 	}
 	
 	// Update is called once per frame
@@ -58,5 +61,10 @@ public class PlayerCharacter : MonoBehaviour {
     {
         RB.MovePosition(RB.position + _movementDelta);
         _movementDelta = Vector3.zero;
+    }
+
+    private void OnApplicationQuit() {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }
