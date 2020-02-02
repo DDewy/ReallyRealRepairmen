@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class PhoneManager : MonoBehaviour {
 
@@ -21,6 +22,8 @@ public class PhoneManager : MonoBehaviour {
 	private RectTransform strikeThru;
 	private AudioSource strikeSound;
 	public bool isStowed = true;
+
+	public UnityEvent OnTxtMsg = new UnityEvent();
 
 
 
@@ -148,6 +151,9 @@ public class PhoneManager : MonoBehaviour {
 		newText.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, (NumOfTexts*-messageSpacing));
 
 		NumOfTexts++;
+
+		//Invoke the OnTxtMsg event
+		OnTxtMsg.Invoke();
 	}
 
 	public void scrollTexts()

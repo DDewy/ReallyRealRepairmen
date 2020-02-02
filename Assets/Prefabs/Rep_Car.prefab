@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c43f3f910d8dac4eb75902b7f46765e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFixed: 0
+  isFixed: 1
   repairType: 10
   OnBroken:
     m_PersistentCalls:
