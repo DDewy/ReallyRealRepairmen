@@ -9,7 +9,12 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Balcony Missing
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ColourPallete
+    second: {fileID: 2100000, guid: 6982dba2bcdfa5042b0fc86a85c94bac, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

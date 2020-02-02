@@ -11,7 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17f00ecaf5955684188983e7e7140c17, type: 3}
   m_Name: Task08
   m_EditorClassIdentifier: 
-  roomCommandsOnStart: []
+  roomCommandsOnStart:
+  - room: 0
+    OpenDoors: 0
   roomCommandsOnFix:
   - room: 0
     OpenDoors: 1
