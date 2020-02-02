@@ -20,21 +20,21 @@ MonoBehaviour:
   - msg: Good news!
     delayAfter: 0.6
   - msg: The locks work
-    delayAfter: 0.6
+    delayAfter: 1
   - msg: Bad news!
     delayAfter: 0.6
   - msg: I think my shin's bruised
-    delayAfter: 1
+    delayAfter: 1.5
   - msg: I might have cramps tomorrow :(
-    delayAfter: 1
+    delayAfter: 2
   - msg: Also the TV no worky
-    delayAfter: 0.6
+    delayAfter: 2.2
   - msg: Soooo if you could fix that...
-    delayAfter: 0.6
+    delayAfter: 1.4
   - msg: '...then we can still have a job!'
-    delayAfter: 0.6
-  - msg: Speaking of which...
     delayAfter: 1
+  - msg: Speaking of which...
+    delayAfter: 2
   - msg: Why is there no heating in this place??
     delayAfter: 1
   TaskName: Repair the TV. Again.

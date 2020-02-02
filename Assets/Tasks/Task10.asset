@@ -20,13 +20,13 @@ MonoBehaviour:
   fixableType: 7
   TaskMessages:
   - msg: Found out why there's no heating
-    delayAfter: 0.6
+    delayAfter: 1.5
   - msg: The boiler is also broken
-    delayAfter: 0.6
+    delayAfter: 1.8
   - msg: And now my socks are all grimeyyy
-    delayAfter: 0.6
+    delayAfter: 1.5
   - msg: Good thing you unclogged the sink!
-    delayAfter: 0.6
+    delayAfter: 1
   - msg: Thanks buddy
     delayAfter: 0.6
   TaskName: Repair the Boiler in the Basement

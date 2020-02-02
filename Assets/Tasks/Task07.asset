@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomCommandsOnStart: []
   roomCommandsOnFix:
-  - room: 2
+  - room: 0
     OpenDoors: 0
   fixableType: 11
   TaskMessages: []

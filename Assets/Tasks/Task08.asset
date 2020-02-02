@@ -13,8 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomCommandsOnStart: []
   roomCommandsOnFix:
-  - room: 2
+  - room: 0
     OpenDoors: 1
-  fixableType: 5
+  fixableType: 6
   TaskMessages: []
   TaskName: Repair the new skylight

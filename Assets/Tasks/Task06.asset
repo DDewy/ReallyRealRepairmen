@@ -14,9 +14,13 @@ MonoBehaviour:
   roomCommandsOnStart:
   - room: 6
     OpenDoors: 1
-  roomCommandsOnFix: []
+  roomCommandsOnFix:
+  - room: 0
+    OpenDoors: 1
   fixableType: 5
   TaskMessages:
+  - msg: hey imwavvivifvslkgfshfkjh
+    delayAfter: 5
   - msg: help
     delayAfter: 0.6
   TaskName: Repair the Spare Bedroom Window

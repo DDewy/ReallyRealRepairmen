@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Name: Task01
   m_EditorClassIdentifier: 
   roomCommandsOnStart:
-  - room: 5
-    OpenDoors: 0
   - room: 8
+    OpenDoors: 1
+  - room: 2
     OpenDoors: 1
   roomCommandsOnFix: []
   fixableType: 0

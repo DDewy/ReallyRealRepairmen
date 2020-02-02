@@ -14,27 +14,25 @@ MonoBehaviour:
   roomCommandsOnStart:
   - room: 3
     OpenDoors: 1
-  - room: 8
-    OpenDoors: 0
   roomCommandsOnFix: []
   fixableType: 3
   TaskMessages:
   - msg: Um
     delayAfter: 0.6
   - msg: I'm going to go fix the car
-    delayAfter: 0.6
+    delayAfter: 1.4
   - msg: Could you check the kitchen?
-    delayAfter: 0.6
+    delayAfter: 1
   - msg: The sink is clogged. thx
     delayAfter: 0.6
   - msg: <3
-    delayAfter: 3
+    delayAfter: 2
   - msg: That was platonic
-    delayAfter: 0.6
+    delayAfter: 1
   - msg: It's a respect heart
     delayAfter: 1
   - msg: From one colleague to another
-    delayAfter: 2
+    delayAfter: 2.2
   - msg: 'Repairbuddies 5eva '
     delayAfter: 0.6
   TaskName: UUuUUUuuugggh. Unclog the Sink.
