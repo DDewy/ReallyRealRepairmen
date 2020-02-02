@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 33767581749317298}
   - component: {fileID: 23235305890730630}
   - component: {fileID: 65310009521648634}
+  - component: {fileID: 114619512939786660}
+  - component: {fileID: 114218876626661040}
   m_Layer: 11
   m_Name: JerryInteract
   m_TagString: Untagged
@@ -96,3 +98,83 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114218876626661040
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1190732245436292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c43f3f910d8dac4eb75902b7f46765e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFixed: 0
+  repairType: 11
+  OnBroken:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114619512939786660}
+        m_MethodName: SetAllowInteraction
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnFixed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114619512939786660}
+        m_MethodName: SetAllowInteraction
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &114619512939786660
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1190732245436292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 097a4a47db49800488b4a09239315146, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allowInteract: 1
+  highlighted: 0
+  InteractTime: 0.5
+  OnInteract:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnHighlight:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114218876626661040}
+        m_MethodName: Fix
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
