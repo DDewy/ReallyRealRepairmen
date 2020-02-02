@@ -9,13 +9,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 17f00ecaf5955684188983e7e7140c17, type: 3}
-  m_Name: SecondTask
+  m_Name: Task12
   m_EditorClassIdentifier: 
   roomCommandsOnStart: []
   roomCommandsOnFix: []
-  fixableType: 0
+  fixableType: 9
   TaskMessages:
-  - Whoops, the TV Broke
-  - 'Can you fix that? '
-  - Also there is no Overtime pay
-  TaskName: Fix the TV
+  - What was that
+  - Oh it was the engine
+  - lol
+  TaskName: Repair the Fridge
