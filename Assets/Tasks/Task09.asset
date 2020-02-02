@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17f00ecaf5955684188983e7e7140c17, type: 3}
+  m_Name: Task09
+  m_EditorClassIdentifier: 
+  roomCommandsOnStart:
+  - room: 4
+    OpenDoors: 0
+  roomCommandsOnFix: []
+  fixableType: 0
+  TaskMessages:
+  - Good news!
+  - The locks work
+  - Bad news!
+  - I think my shin's bruised
+  - I might have cramps tomorrow :(
+  - Also the TV no worky
+  - Soooo if you could fix that...
+  - '...then we can still have a job!'
+  - Speaking of which...
+  - Why is there no heating in this place??
+  TaskName: Repair the TV. Again.

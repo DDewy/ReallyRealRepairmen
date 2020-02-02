@@ -9,12 +9,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 17f00ecaf5955684188983e7e7140c17, type: 3}
-  m_Name: FourthTask
+  m_Name: Task13
   m_EditorClassIdentifier: 
   roomCommandsOnStart: []
-  roomCommandsOnFix: []
-  fixableType: 0
+  roomCommandsOnFix:
+  - room: 8
+    OpenDoors: 1
+  fixableType: 8
   TaskMessages:
-  - TV...
-  - I didn't touch it
-  TaskName: Fix the TV
+  - So not to doubt you
+  - But is something burning?
+  - It's just... I'm covered in oil now
+  - and that's very concerning to me
+  TaskName: OVENOVENOVENOVENOVEN
