@@ -17,7 +17,7 @@ public class TaskObject : ScriptableObject {
 	/// </summary>
 	public Repairables fixableType;
 
-	public string[] TaskMessages;
+	public TxtMsg[] TaskMessages;
 
 	public string TaskName;
 
@@ -26,5 +26,12 @@ public class TaskObject : ScriptableObject {
 	{
 		public Rooms room;
 		public bool OpenDoors;
+	}
+
+	[System.Serializable]
+	public class TxtMsg
+	{
+		public string msg;
+		public float delayAfter = 0.6f;
 	}
 }
