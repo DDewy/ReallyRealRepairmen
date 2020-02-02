@@ -18,6 +18,8 @@ public class TaskManager : MonoBehaviour
 	private bool taskActive = false;
 	public int startIndex = 0;
 
+	public TaskCompletedEvent OnTaskCompleted = new TaskCompletedEvent();
+
 
 	// Use this for initialization
 	IEnumerator Start () 
@@ -103,6 +105,9 @@ public class TaskManager : MonoBehaviour
 		//Stop Listening to this task
 		StopListeningToTask(_currentIndex);
 
+		//Invoke the task completed event
+		OnTaskCompleted.Invoke(tasksToDo[_currentIndex]);
+
 		//Set start the next tasks
 		//TODO: Might need a delay here
 		_currentIndex++;
@@ -134,4 +139,6 @@ public class TaskManager : MonoBehaviour
 			doorManager.SetDoors(commands[c].room, commands[c].OpenDoors);
 		}
 	}
+
+	public class TaskCompletedEvent : UnityEngine.Events.UnityEvent<TaskObject> { }
 }
