@@ -19,10 +19,16 @@ MonoBehaviour:
   roomCommandsOnFix: []
   fixableType: 3
   TaskMessages:
-  - So the sink is also busted
-  - I think it clogged up
-  - With all the dank basement grime
-  - Glad it's not on me!
-  - Gonna finish checking upstairs
-  - Gotta be thorough!
+  - msg: So the sink is also busted
+    delayAfter: 0.6
+  - msg: I think it clogged up
+    delayAfter: 0.6
+  - msg: With all the dank basement grime
+    delayAfter: 0.6
+  - msg: Glad it's not on me!
+    delayAfter: 1.2
+  - msg: Gonna finish checking upstairs
+    delayAfter: 0.6
+  - msg: Gotta be thorough!
+    delayAfter: 0.6
   TaskName: Repair the kitchen sink

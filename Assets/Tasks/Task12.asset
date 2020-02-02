@@ -15,7 +15,10 @@ MonoBehaviour:
   roomCommandsOnFix: []
   fixableType: 9
   TaskMessages:
-  - What was that
-  - Oh it was the engine
-  - lol
+  - msg: What was that
+    delayAfter: 2
+  - msg: Oh it was the engine
+    delayAfter: 1
+  - msg: lol
+    delayAfter: 0.6
   TaskName: Repair the Fridge

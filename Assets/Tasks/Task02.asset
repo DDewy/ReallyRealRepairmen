@@ -19,8 +19,12 @@ MonoBehaviour:
   roomCommandsOnFix: []
   fixableType: 1
   TaskMessages:
-  - So
-  - You're not going to believe this
-  - But the toilet's broken
-  - Fix that plz I'm gonna check the pipes
+  - msg: So
+    delayAfter: 0.6
+  - msg: You're not going to believe this
+    delayAfter: 0.6
+  - msg: But the toilet's broken
+    delayAfter: 0.6
+  - msg: Fix that plz I'm gonna check the pipes
+    delayAfter: 0.6
   TaskName: Repair the toilet upstairs

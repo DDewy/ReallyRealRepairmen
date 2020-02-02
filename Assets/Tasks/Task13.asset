@@ -17,8 +17,12 @@ MonoBehaviour:
     OpenDoors: 1
   fixableType: 8
   TaskMessages:
-  - So not to doubt you
-  - But is something burning?
-  - It's just... I'm covered in oil now
-  - and that's very concerning to me
+  - msg: So not to doubt you
+    delayAfter: 0.6
+  - msg: But is something burning?
+    delayAfter: 2
+  - msg: It's just... I'm covered in oil now
+    delayAfter: 0.6
+  - msg: and that's very concerning to me
+    delayAfter: 0.6
   TaskName: OVENOVENOVENOVENOVEN

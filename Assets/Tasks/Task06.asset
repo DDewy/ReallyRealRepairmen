@@ -17,5 +17,6 @@ MonoBehaviour:
   roomCommandsOnFix: []
   fixableType: 5
   TaskMessages:
-  - help
+  - msg: help
+    delayAfter: 0.6
   TaskName: Repair the Spare Bedroom Window

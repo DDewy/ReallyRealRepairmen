@@ -19,13 +19,22 @@ MonoBehaviour:
   roomCommandsOnFix: []
   fixableType: 3
   TaskMessages:
-  - Um
-  - I'm going to go fix the car
-  - Could you check the kitchen?
-  - The sink is clogged. thx
-  - <3
-  - Platonically
-  - It's a respect heart
-  - From one colleague to another
-  - Repairbuddies 5eva
+  - msg: Um
+    delayAfter: 0.6
+  - msg: I'm going to go fix the car
+    delayAfter: 0.6
+  - msg: Could you check the kitchen?
+    delayAfter: 0.6
+  - msg: The sink is clogged. thx
+    delayAfter: 0.6
+  - msg: <3
+    delayAfter: 3
+  - msg: That was platonic
+    delayAfter: 0.6
+  - msg: It's a respect heart
+    delayAfter: 1
+  - msg: From one colleague to another
+    delayAfter: 2
+  - msg: 'Repairbuddies 5eva '
+    delayAfter: 0.6
   TaskName: UUuUUUuuugggh. Unclog the Sink.

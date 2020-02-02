@@ -19,9 +19,14 @@ MonoBehaviour:
   roomCommandsOnFix: []
   fixableType: 2
   TaskMessages:
-  - Are you done??
-  - Basement's a MESS
-  - I feel like Swamp Thing
-  - NVM
-  - I can use the kitchen sink
+  - msg: Are you done??
+    delayAfter: 0.6
+  - msg: Basement's a MESS
+    delayAfter: 0.6
+  - msg: I feel like Swamp Thing
+    delayAfter: 0.8
+  - msg: NVM
+    delayAfter: 0.6
+  - msg: I can use the kitchen sink
+    delayAfter: 0.6
   TaskName: Lay some pipe in the basement
