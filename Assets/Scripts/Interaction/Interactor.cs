@@ -51,6 +51,10 @@ public class Interactor : MonoBehaviour {
 	/// The interaction state from the last frame
 	/// </summary>
 	private bool _previousInteract = false;
+
+	[Header("Debug")]
+	public bool isOverInteract = false;
+	public bool isInteractable = false;
 	
 	// Use this for initialization
 	void Start () 
@@ -158,6 +162,9 @@ public class Interactor : MonoBehaviour {
 		{
 			_phoneManager.putPhoneAway();
 		}
+
+		isOverInteract = newInteractValid;
+		isInteractable = newInteract.AllowInteraction();
 	}
 
     private void OnDrawGizmos() 
