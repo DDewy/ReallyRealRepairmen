@@ -38,9 +38,8 @@ public class Interactable : MonoBehaviour {
 		return allowInteract;
 	}
 
-	public void Highlight()
+	public bool Highlight()
 	{
-
 		if(allowInteract)
 		{
 			highlighted = true;
@@ -50,6 +49,8 @@ public class Interactable : MonoBehaviour {
 			meshRenderer.sharedMaterial = highlightMaterial;
 			#endif
 		}
+
+		return allowInteract;
 	}
 
 	public void RemoveHighlight()

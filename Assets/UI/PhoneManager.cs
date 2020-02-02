@@ -92,12 +92,26 @@ public class PhoneManager : MonoBehaviour {
 		StartCoroutine(DelayMessages(newMsgs));
 	}
 
+	public void SendMultipleMessages(TaskObject.TxtMsg[] newMsgs)
+	{
+		StartCoroutine(DelayMessages(newMsgs));
+	}
+
 	IEnumerator DelayMessages(string[] newMsgs)
 	{
 		foreach(string msg in newMsgs)
 		{
 			NewTextMessage(msg);
 			yield return new WaitForSeconds(0.6f);
+		}
+	}
+
+	IEnumerator DelayMessages(TaskObject.TxtMsg[] newMsgs)
+	{
+		foreach(TaskObject.TxtMsg msg in newMsgs)
+		{
+			NewTextMessage(msg.msg);
+			yield return new WaitForSeconds(msg.delayAfter);
 		}
 	}
 

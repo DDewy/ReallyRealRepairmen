@@ -9,13 +9,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 17f00ecaf5955684188983e7e7140c17, type: 3}
-  m_Name: ThirdTask
+  m_Name: Task02
   m_EditorClassIdentifier: 
-  roomCommandsOnStart: []
+  roomCommandsOnStart:
+  - room: 5
+    OpenDoors: 1
+  - room: 4
+    OpenDoors: 0
   roomCommandsOnFix: []
-  fixableType: 2
+  fixableType: 1
   TaskMessages:
-  - Hey!
-  - For some reason the pipes broke again
-  - I swear it wasn't me
-  TaskName: Fix the Pipes
+  - So
+  - You're not going to believe this
+  - But the toilet's broken
+  - Fix that plz I'm gonna check the pipes
+  TaskName: Repair the toilet upstairs
