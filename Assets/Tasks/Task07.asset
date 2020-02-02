@@ -12,9 +12,7 @@ MonoBehaviour:
   m_Name: Task07
   m_EditorClassIdentifier: 
   roomCommandsOnStart: []
-  roomCommandsOnFix:
-  - room: 0
-    OpenDoors: 0
+  roomCommandsOnFix: []
   fixableType: 11
   TaskMessages: []
   TaskName: Check on Jerry...

@@ -16,6 +16,7 @@ public class TaskManager : MonoBehaviour
 	public int _currentIndex = 0;
 
 	private bool taskActive = false;
+	public int startIndex = 0;
 
 
 	// Use this for initialization
@@ -28,7 +29,7 @@ public class TaskManager : MonoBehaviour
 		yield return new WaitForSeconds(2f);
 
 		//Set the task manager off onto the first task
-		SetTask(0);
+		SetTask(startIndex);
 	}
 
 	void SetTask()
@@ -107,6 +108,7 @@ public class TaskManager : MonoBehaviour
 		_currentIndex++;
 		if(_currentIndex < tasksToDo.Length)
 		{
+			Debug.Log("current task completed");
 			Invoke(nameof(SetTask), 2f);
 		}
 		else

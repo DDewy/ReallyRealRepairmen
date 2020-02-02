@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 65310009521648634}
   - component: {fileID: 114619512939786660}
   - component: {fileID: 114218876626661040}
+  - component: {fileID: 95660613257850836}
   m_Layer: 11
   m_Name: JerryInteract
   m_TagString: Untagged
@@ -85,7 +86,7 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1190732245436292}
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 4300000, guid: ff3886cd9e661c44fb0ea6fce2671dfa, type: 3}
 --- !u!65 &65310009521648634
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -98,6 +99,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &95660613257850836
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1190732245436292}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a8b6b6fd14d159c40ae2a52aa3a7b6bb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114218876626661040
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -125,13 +144,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 33767581749317298}
-        m_MethodName: set_mesh
-        m_Mode: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: Break
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 4300000, guid: 82ea8871d4f7a824691a60498a9ac544,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Mesh, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -142,7 +160,7 @@ MonoBehaviour:
   OnFixed:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114619512939786660}
+      - m_Target: {fileID: 0}
         m_MethodName: SetAllowInteraction
         m_Mode: 6
         m_Arguments:
@@ -151,18 +169,31 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1190732245436292}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 33767581749317298}
+        m_MethodName: set_mesh
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 4300000, guid: 4eff3d6e4f630c748ba2f04f7f3871d5,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Mesh, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 23235305890730630}
+        m_MethodName: set_material
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: e119fb260d9c9bb4784b0b791df4e993,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
@@ -188,9 +219,20 @@ MonoBehaviour:
   OnHighlight:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114218876626661040}
-        m_MethodName: Fix
-        m_Mode: 1
+      - m_Target: {fileID: 95660613257850836}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Leave
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114619512939786660}
+        m_MethodName: SetAllowInteraction
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
