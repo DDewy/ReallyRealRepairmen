@@ -12,25 +12,23 @@ MonoBehaviour:
   m_Name: Task05
   m_EditorClassIdentifier: 
   roomCommandsOnStart:
-  - room: 6
-    OpenDoors: 0
   - room: 7
     OpenDoors: 1
   roomCommandsOnFix: []
   fixableType: 4
   TaskMessages:
   - msg: The balcony is a safety hazard!!
-    delayAfter: 0.6
+    delayAfter: 1.3
   - msg: It fell off while I looked at it!
     delayAfter: 0.6
   - msg: Horrible!!
     delayAfter: 1.4
   - msg: A small child or pet could fall
-    delayAfter: 0.9
+    delayAfter: 1.8
   - msg: And there's a splinter in my sock
-    delayAfter: 0.6
+    delayAfter: 1.3
   - msg: What a tough job we have
-    delayAfter: 1
+    delayAfter: 1.8
   - msg: I sure am glad you're here :)
     delayAfter: 0.6
-  TaskName: Repair the balcony
+  TaskName: Repair the balcony upstairs
