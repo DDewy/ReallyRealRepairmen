@@ -12,5 +12,6 @@ public class UIManager : MonoBehaviour {
 		public GameObject screenRoot;
 		public Image ProgressBG;
 		public Image ProgressCircle;
+		public Image HighlightImg;
 	}
 }
