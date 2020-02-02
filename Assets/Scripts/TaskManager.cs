@@ -16,7 +16,10 @@ public class TaskManager : MonoBehaviour
 	public int _currentIndex = 0;
 
 	private bool taskActive = false;
+	
+	#if UNITY_EDITOR
 	public int startIndex = 0;
+	#endif
 
 	public TaskCompletedEvent OnTaskCompleted = new TaskCompletedEvent();
 
@@ -31,7 +34,11 @@ public class TaskManager : MonoBehaviour
 		yield return new WaitForSeconds(2f);
 
 		//Set the task manager off onto the first task
+		#if UNITY_EDITOR
 		SetTask(startIndex);
+		#else
+		SetTask(0);
+		#endif
 	}
 
 	void SetTask()
