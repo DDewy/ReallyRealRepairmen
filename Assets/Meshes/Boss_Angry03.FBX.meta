@@ -9,9 +9,14 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Boss_Angry03
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #94'
+    second: {fileID: 2100000, guid: 2a6de86295b04894f9239bb94f0d5672, type: 2}
   materials:
-    importMaterials: 0
+    importMaterials: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
