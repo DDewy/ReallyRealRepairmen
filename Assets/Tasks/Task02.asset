@@ -14,17 +14,15 @@ MonoBehaviour:
   roomCommandsOnStart:
   - room: 5
     OpenDoors: 1
-  - room: 4
-    OpenDoors: 0
   roomCommandsOnFix: []
   fixableType: 1
   TaskMessages:
   - msg: So
-    delayAfter: 0.6
+    delayAfter: 1.2
   - msg: You're not going to believe this
-    delayAfter: 0.6
+    delayAfter: 1
   - msg: But the toilet's broken
-    delayAfter: 0.6
+    delayAfter: 1
   - msg: Fix that plz I'm gonna check the pipes
     delayAfter: 0.6
   TaskName: Repair the toilet upstairs
