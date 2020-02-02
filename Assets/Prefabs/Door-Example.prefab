@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 4078379577911662}
   - component: {fileID: 33747789980498952}
   - component: {fileID: 23397546354088592}
+  - component: {fileID: 65168464249814858}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -66,7 +67,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1530897579967360}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -9.074064, y: 0.5, z: -8.404528}
+  m_LocalPosition: {x: 0, y: 0, z: -4.146}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4078379577911662}
@@ -115,6 +116,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1578779184651472}
   m_Mesh: {fileID: 4300000, guid: d872d9dcfd39bae418bdf6fc27805db5, type: 3}
+--- !u!65 &65168464249814858
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1578779184651472}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.16982827, y: 1.0000008, z: 1.5000006}
+  m_Center: {x: -0.00314927, y: 0.50000006, z: 0.7500002}
 --- !u!82 &82454734460170812
 AudioSource:
   m_ObjectHideFlags: 1
@@ -240,6 +253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 95574953204822724}
+  startOpen: 0
   doorAudio: {fileID: 82454734460170812}
   openClip: {fileID: 8300000, guid: 931add15e6cba0e4bad11f1d8fba635e, type: 3}
   closeClip: {fileID: 8300000, guid: 7333c46ee6d33614c8e5799682f4fb88, type: 3}
