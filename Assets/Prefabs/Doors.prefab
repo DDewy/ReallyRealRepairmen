@@ -716,7 +716,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1910848623259994}
-  m_LocalRotation: {x: -0.00000068545336, y: -0.707107, z: -0.70710665, w: 0.00000032782552}
+  m_LocalRotation: {x: -0.00000074505795, y: -0.707107, z: -0.70710665, w: 0.00000017881392}
   m_LocalPosition: {x: -0, y: -0, z: 0.002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -3170,7 +3170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 95817005421695082}
   startOpen: 0
-  openClockwise: 1
+  openClockwise: 0
   doorAudio: {fileID: 82810027205283034}
   openClip: {fileID: 8300000, guid: 931add15e6cba0e4bad11f1d8fba635e, type: 3}
   closeClip: {fileID: 8300000, guid: 7333c46ee6d33614c8e5799682f4fb88, type: 3}
@@ -3187,7 +3187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 95962248582887458}
   startOpen: 0
-  openClockwise: 1
+  openClockwise: 0
   doorAudio: {fileID: 82727461456179970}
   openClip: {fileID: 8300000, guid: 931add15e6cba0e4bad11f1d8fba635e, type: 3}
   closeClip: {fileID: 8300000, guid: 7333c46ee6d33614c8e5799682f4fb88, type: 3}
@@ -3204,7 +3204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 95454743915232352}
   startOpen: 0
-  openClockwise: 1
+  openClockwise: 0
   doorAudio: {fileID: 82036929368467868}
   openClip: {fileID: 8300000, guid: 931add15e6cba0e4bad11f1d8fba635e, type: 3}
   closeClip: {fileID: 8300000, guid: 7333c46ee6d33614c8e5799682f4fb88, type: 3}
@@ -3221,7 +3221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 95051827422046858}
   startOpen: 0
-  openClockwise: 1
+  openClockwise: 0
   doorAudio: {fileID: 82025100491563216}
   openClip: {fileID: 8300000, guid: 931add15e6cba0e4bad11f1d8fba635e, type: 3}
   closeClip: {fileID: 8300000, guid: 7333c46ee6d33614c8e5799682f4fb88, type: 3}
@@ -3255,7 +3255,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorAnimator: {fileID: 95267160210784740}
   startOpen: 0
-  openClockwise: 1
+  openClockwise: 0
   doorAudio: {fileID: 82415449532066164}
   openClip: {fileID: 8300000, guid: 931add15e6cba0e4bad11f1d8fba635e, type: 3}
   closeClip: {fileID: 8300000, guid: 7333c46ee6d33614c8e5799682f4fb88, type: 3}

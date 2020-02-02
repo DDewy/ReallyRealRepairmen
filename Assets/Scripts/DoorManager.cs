@@ -53,7 +53,6 @@ public class DoorManager : MonoBehaviour {
 
 		for(int i = 0; i < rooms.Length; i++)
 		{
-			Debug.LogFormat("Trying to add room {0} and it has {1} doors", rooms[i].name, rooms[i].doors.Length);
 			if(_rooms.ContainsKey(rooms[i].name))
 			{
 				Debug.LogWarningFormat(gameObject, "There are two {0} rooms in the Rooms array, please fix this with index {1}", rooms[i].name, i);
@@ -67,6 +66,36 @@ public class DoorManager : MonoBehaviour {
 
 		_roomsSetUp = true;
 	}
+
+	#if UNITY_EDITOR || DEVELOPMENT_BUILD
+	private void Update() 
+	{
+		if(Input.GetKeyDown(KeyCode.Equals))
+		{
+			Debug.Log("Opening all Doors");
+			//Open all doors
+			for(int r = 0; r < rooms.Length; r++)
+			{
+				for(int d = 0; d < rooms[r].doors.Length; d++)
+				{
+					rooms[r].doors[d].OpenDoor();
+				}
+			}
+		}
+		else if(Input.GetKeyDown(KeyCode.Minus))
+		{
+			Debug.Log("Closing all doors");
+			//Close all doors
+			for(int r = 0; r < rooms.Length; r++)
+			{
+				for(int d = 0; d < rooms[r].doors.Length; d++)
+				{
+					rooms[r].doors[d].CloseDoor();
+				}
+			}
+		}
+	}
+	#endif
 
 	[System.Serializable]
 	public struct RoomInfo
