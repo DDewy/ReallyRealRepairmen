@@ -64,6 +64,9 @@ public class Interactor : MonoBehaviour {
 		gameplayScreen.ProgressBG.enabled = false;
 		gameplayScreen.ProgressCircle.enabled = false;
 		gameplayScreen.HighlightImg.enabled = false;
+
+		//Listen to the phone manager
+		_phoneManager.OnTxtMsg.AddListener(CancelAction);
 	}
 	
 	// Update is called once per frame
@@ -169,4 +172,18 @@ public class Interactor : MonoBehaviour {
 			Gizmos.DrawWireSphere(endPos, castRadius);
 		}
     }
+
+	private void CancelAction()
+	{
+		//Only cancel if currently active
+		if(_previousInteract)
+		{
+			_interactAttempted = true;
+
+			//Hide the Progress-UI
+			var gameplayScreen = uiManager.gameplayScreen;
+			gameplayScreen.ProgressBG.enabled = false;
+			gameplayScreen.ProgressCircle.enabled = false;
+		}
+	}
 }
