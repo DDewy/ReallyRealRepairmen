@@ -365,5 +365,3 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  highlightMaterial: {fileID: 2100000, guid: 770b37c3faaa29141a8062d8c69fc2c1, type: 2}
-  meshRenderer: {fileID: 23757576903587042}
