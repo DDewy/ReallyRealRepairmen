@@ -16,7 +16,12 @@ ModelImporter:
     3300002: Pipes
     4300000: Pipes
     4300002: Cracked Pipe
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ColourPallete
+    second: {fileID: 2100000, guid: 8a30590567204b94bb9a00cf35a43c83, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

@@ -14,6 +14,8 @@ MonoBehaviour:
   roomCommandsOnStart:
   - room: 5
     OpenDoors: 1
+  - room: 8
+    OpenDoors: 0
   roomCommandsOnFix: []
   fixableType: 1
   TaskMessages:
