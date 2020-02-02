@@ -11,6 +11,8 @@ public class Door : MonoBehaviour {
 
 	public bool startOpen = false;
 
+	public bool openClockwise = true;
+
 	[Header("Audio")]
 	public AudioSource doorAudio;
 
@@ -27,6 +29,7 @@ public class Door : MonoBehaviour {
 	{
 		isOpen = true;
 
+		doorAnimator.SetBool("isClockwise", openClockwise);
 		doorAnimator.SetTrigger("Open");
 
 		doorAudio.clip = openClip;
@@ -37,6 +40,7 @@ public class Door : MonoBehaviour {
 	{
 		isOpen = false;
 		
+		doorAnimator.SetBool("isClockwise", openClockwise);
 		doorAnimator.SetTrigger("Close");
 
 		doorAudio.clip = closeClip;
