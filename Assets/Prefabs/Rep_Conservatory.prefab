@@ -439,7 +439,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allowInteract: 0
   highlighted: 0
-  InteractTime: 0.5
+  InteractTime: 3
   OnInteract:
     m_PersistentCalls:
       m_Calls:

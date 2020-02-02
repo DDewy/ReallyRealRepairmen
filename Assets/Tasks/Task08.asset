@@ -18,5 +18,19 @@ MonoBehaviour:
   - room: 0
     OpenDoors: 1
   fixableType: 6
-  TaskMessages: []
+  TaskMessages:
+  - msg: That was close!
+    delayAfter: 0.8
+  - msg: Any criminal could have opened that door
+    delayAfter: 0.8
+  - msg: I'll test the rest of the locks
+    delayAfter: 2.8
+  - msg: 'Look at us: preventing crime'
+    delayAfter: 1
+  - msg: A regular Batman and Robin
+    delayAfter: 1.5
+  - msg: omg I could play the theme
+    delayAfter: 2
+  - msg: Smart TVs can play music right
+    delayAfter: 1
   TaskName: Repair the new skylight
