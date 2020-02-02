@@ -13,7 +13,7 @@ public class TaskManager : MonoBehaviour
 	[Header("Tasks")]
 	public TaskObject[] tasksToDo;
 
-	private int _currentIndex = 0;
+	public int _currentIndex = 0;
 
 	private bool taskActive = false;
 

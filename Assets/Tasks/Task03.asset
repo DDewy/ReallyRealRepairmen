@@ -14,19 +14,23 @@ MonoBehaviour:
   roomCommandsOnStart:
   - room: 4
     OpenDoors: 1
-  - room: 3
-    OpenDoors: 0
   roomCommandsOnFix: []
   fixableType: 2
   TaskMessages:
-  - msg: Are you done??
+  - msg: is the bathroom free
     delayAfter: 0.6
-  - msg: Basement's a MESS
-    delayAfter: 0.6
-  - msg: I feel like Swamp Thing
-    delayAfter: 0.8
-  - msg: NVM
-    delayAfter: 0.6
+  - msg: please
+    delayAfter: 1
+  - msg: oh nvm
+    delayAfter: 0.9
   - msg: I can use the kitchen sink
-    delayAfter: 0.6
+    delayAfter: 2
+  - msg: the basement's a MESS btw
+    delayAfter: 0.9
+  - msg: and so am I :(
+    delayAfter: 1
+  - msg: I feel like Swamp Thing
+    delayAfter: 3
+  - msg: Do you think this will go on the water bill??
+    delayAfter: 1
   TaskName: Lay some pipe in the basement
