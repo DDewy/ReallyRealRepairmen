@@ -21,6 +21,8 @@ public class TaskManager : MonoBehaviour
 	public int startIndex = 0;
 	#endif
 
+	public bool startOnStart = false;
+
 	public TaskCompletedEvent OnTaskCompleted = new TaskCompletedEvent();
 
 
@@ -30,9 +32,19 @@ public class TaskManager : MonoBehaviour
 		//Save reference to the phone manager
 		_phoneManager = PhoneManager.instance;
 
+		if(!startOnStart)
+		{
+			yield break;
+		}
+
 		//Wait for 2 seconds before showing the first task
 		yield return new WaitForSeconds(2f);
 
+		StartFirstTask();
+	}
+
+	public void StartFirstTask()
+	{
 		//Set the task manager off onto the first task
 		#if UNITY_EDITOR
 		SetTask(startIndex);
